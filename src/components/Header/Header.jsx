@@ -2,7 +2,7 @@ import React from 'react'
 import {Container, Logo, LogoutBtn} from '../index'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { logout } from '../features/auth/authSlice'
+import { logout } from '../../store/authSlice'
 import { useNavigate } from 'react-router-dom'
 
 export default function Header() {
