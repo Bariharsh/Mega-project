@@ -36,7 +36,7 @@ export class AuthService {
 
     async getCurrentUser() {
         try {
-            await this.account.get();
+            return await this.account.get();
         } catch (error) {
             console.log("Appwrite service :: getCurrentUser :: error: ", error);
         }
@@ -46,7 +46,7 @@ export class AuthService {
 
     async logout() {
         try {
-            await this.account.deleteSessions('current');
+            return await this.account.deleteSessions('current');
         } catch (error) {
             console.log("Appwrite service :: logout :: error: ", error);
         }
